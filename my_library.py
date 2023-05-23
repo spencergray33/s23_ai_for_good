@@ -7,7 +7,7 @@ def cond_prob(your_table, your_evidence, your_evidence_value, your_target, your_
   target_subset = up_table_subset(your_table, your_target, 'equals', your_target_value)
   evidence_list = up_get_column(target_subset, your_evidence)
   p_b_a = sum([1 if v==your_evidence_value else 0 for v in evidence_list])/len(evidence_list)
-  return p_b_a
+  return p_b_a + .01
 
 def cond_probs_product(your_table, your_evidence_values, your_target_column, your_target_value):
   your_table_columns = up_list_column_names(your_table)
