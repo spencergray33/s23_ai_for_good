@@ -65,7 +65,8 @@ def try_archs(full_table, target, architectures, thresholds):
   print(f'Architecture: {arch}')
   print(up_metrics_table(all_mets))
 
-
+#from chapter 14
+from sklearn.ensemble import RandomForestClassifier
 
 def test_it():
   return 'loaded'
