@@ -1,3 +1,6 @@
+def test_it():
+  return 'loaded'
+
 def compute_probs(neg,pos):
   p0 = neg/(neg+pos)
   p1 = pos/(neg+pos)
@@ -49,8 +52,6 @@ def metrics(your_list):
 def try_archs(full_table, target, architectures, thresholds):
   train_table, test_table = up_train_test_split(full_table, target, .4)
 
-  #copy paste code here
-  target = 'adopted'
   for arch in architectures:
     all_results = up_neural_net(train_table, test_table, arch, target)
 
@@ -67,6 +68,3 @@ def try_archs(full_table, target, architectures, thresholds):
 
 #from chapter 14
 from sklearn.ensemble import RandomForestClassifier
-
-def test_it():
-  return 'loaded'
